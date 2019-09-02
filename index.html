@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Movie Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+
+</head>
+
+<body>
+
+    <div id="div_main">
+        <h1>Add Movie Title</h1>
+        <hr>
+        <form action="process.html" name="movieForm" method="POST">
+            <div id="div_left">
+                <p>Name:</p>
+                <p>Type:</p>
+                <p>Picture Name:</p>
+                <p>Director:</p>
+                <p>Box Office ($):</p>
+            </div>
+            <div id="div_right">
+                <p><input type="text" id="movieName" name="movieName"></p>
+                <p>
+                    <select id="selectType" name="selectType">
+                        <option value="-1">Select Movie Type</option>
+                        <option value="horror">Horror</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="action">Action</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                    </select>
+
+                </p>
+                <p><input type="text" id="pictureName" name="pictureName"></p>
+                <p><input type="text" id="director" name="director"></p>
+                <p><input type="text" id="boxOffice" name="boxOffice"></p>
+            </div>
+            <div class="clear"></div>
+            Description:
+            <br>
+            <textarea id="description" name="description" placeholder="Key in description here" rows="8"
+                cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Submit" id="btnSubmit" class="button" onclick="return formCheck()">
+        </form>
+        <br>
+        <!-- Display messages when no data input -->
+        <div id="divMessage"></div>
+
+</body>
+
+</html>
